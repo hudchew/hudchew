@@ -1,0 +1,20 @@
+<a routerLink="/addWiki">Add wiki</a>
+<table class='table'>
+  <thead>
+    <tr>
+      <td>Action</td>
+      <td>Name</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of wikis">
+      <td>
+        <button type="button" (click)="editWiki(data)" >Edit</button>
+        <button type="button" (click)="delWiki(data)" >Delete</button>
+      </td>
+      <td>{{data.value.name}}</td>
+      <td>{{data.value.description}}</td>
+    </tr>
+  </tbody>
+</table>
